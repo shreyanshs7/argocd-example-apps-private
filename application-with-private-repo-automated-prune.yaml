@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-automated-prune-demo
+  namespace: argocd
+spec:
+  destination:
+    namespace: guestbook-automated-prune-demo
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: guestbook-with-sub-directories
+    repoURL: "https://github.com/shreyanshs7/argocd-example-apps-private.git"
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

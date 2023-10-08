@@ -32,5 +32,5 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "shreyanshss7@gmail.com"
           git add -A
-          git commit -m "Update Docker image tag"
+          git commit -m "Deployed new changes"
           git push

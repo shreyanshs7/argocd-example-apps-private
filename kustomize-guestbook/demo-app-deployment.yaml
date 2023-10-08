@@ -18,3 +18,5 @@ spec:
         name: demo-app
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: regcred

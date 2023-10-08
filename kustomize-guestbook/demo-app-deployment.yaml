@@ -14,7 +14,7 @@ spec:
         app: demo-app
     spec:
       containers:
-      - image: docker.io/shreyanshss7/demo-app:87464a730b1bbdd6a3617eb92ddca9fc8355e82b
+      - image: docker.io/shreyanshss7/demo-app:f6faf612a2bdc44b97d1333a68a37b5cb2d37926
         name: demo-app
         ports:
         - containerPort: 80

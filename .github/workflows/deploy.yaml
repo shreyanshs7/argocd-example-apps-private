@@ -19,13 +19,15 @@ jobs:
       - name: Build and push Docker image
         run: |
           pushd demo-app
-          docker build -t docker.io/shreyanshss7/demo-app:${{ github.sha }} .
-          docker push docker.io/shreyanshss7/demo-app:${{ github.sha }}
+          docker build -t docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app:${{ github.sha }} .
+          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app:${{ github.sha }}
           popd
 
       - name: Update Kustomize file
         run: |
-          sed -i 's|docker.io/shreyanshss7/demo-app:[^ ]*|docker.io/shreyanshss7/demo-app:'${{ github.sha }}'|' kustomize-guestbook/demo-app-deployment.yaml
+          pushd kustomize-guestbook
+          kustomize edit set image docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app=docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app:${{ github.sha }}
+          popd
 
       - name: Commit and push changes
         run: |

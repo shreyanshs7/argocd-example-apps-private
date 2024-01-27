@@ -8,6 +8,7 @@ namespace: staging
 resources:
 - ../../base/service-1
 - ../../base/service-2
+- ../../base/service-3
 
 labels:
 - includeSelectors: true
@@ -17,3 +18,4 @@ labels:
 patches:
   - path: service-1/deployment-patch.yaml
   - path: service-2/deployment-patch.yaml
+  - path: service-3/deployment-patch.yaml

@@ -11,4 +11,4 @@ resources:
 images:
 - name: docker.io/shreyanshss7/demo-app
   newName: docker.io/shreyanshss7/demo-app
-  newTag: 642913e0b850ada014febb2a14076cc8941ae470
+  newTag: 96ae894537e62aab8ded50d820adffc6932644e9

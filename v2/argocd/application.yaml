@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: default
+  name: application-1
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: application-1
     server: "https://kubernetes.default.svc"
   project: default
   source:
-    path: v2
+    path: v2/staging
     repoURL: "https://github.com/shreyanshs7/argocd-example-apps-private.git"
     targetRevision: main
   syncPolicy:

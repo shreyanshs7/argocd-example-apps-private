@@ -7,9 +7,12 @@ commonLabels:
   env: staging
 
 bases:
-  - ../../base/service-1
-  - ../../base/service-2
+- ../../base/service-1
+- ../../base/service-2
 
+resources:
+  - service-1/service-1.yaml
+  - service-2/service-2.yaml
 
 patchesStrategicMerge:
   - service-1.yaml

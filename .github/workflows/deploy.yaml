@@ -29,10 +29,10 @@ jobs:
           kustomize edit set image docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app=docker.io/${{ secrets.DOCKER_USERNAME }}/demo-app:${{ github.sha }}
           popd
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "shreyanshss7@gmail.com"
-          git add -A
-          git commit -m "Minor changes"
-          git push
+      # - name: Commit and push changes
+      #   run: |
+      #     git config user.name "GitHub Actions"
+      #     git config user.email "shreyanshss7@gmail.com"
+      #     git add -A
+      #     git commit -m "Minor changes"
+      #     git push

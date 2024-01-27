@@ -15,7 +15,7 @@ labels:
   pairs:
     env: hulk
 
-# patches:
-#   - path: service-1/deployment-patch.yaml
-#   - path: service-2/deployment-patch.yaml
-#   - path: service-3/deployment-patch.yaml
+patches:
+  - path: service-1/deployment-patch.yaml
+  - path: service-2/deployment-patch.yaml
+  - path: service-3/deployment-patch.yaml

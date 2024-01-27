@@ -3,15 +3,17 @@ kind: Kustomization
 
 namePrefix: staging-
 
-commonLabels:
-  env: staging
+namespace: staging
 
-bases:
+resources:
 - ../../base/service-1
 - ../../base/service-2
 
-patchesStrategicMerge:
-  - service-1.yaml
-  - service-2.yaml
+labels:
+- includeSelectors: true
+  pairs:
+    env: staging
 
-namespace: staging
+patches:
+  - path: service-1/deployment-patch.yaml
+  - path: service-2/deployment-patch.yaml

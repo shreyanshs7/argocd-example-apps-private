@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source:
-    path: v2/staging
+    path: v2/overlays/staging
     repoURL: "https://github.com/shreyanshs7/argocd-example-apps-private.git"
     targetRevision: main
   syncPolicy:

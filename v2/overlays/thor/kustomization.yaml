@@ -4,9 +4,9 @@ kind: Kustomization
 resources:
 - namespaces/thor-default.yaml
 - namespaces/thor-platform.yaml
-- ../../base/service-1
-- ../../base/service-2
-- ../../base/service-3
+- ../../thor-base/service-1
+- ../../thor-base/service-2
+- ../../thor-base/service-3
 
 labels:
 - includeSelectors: true

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-app-3
+  namespace: thor-default
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: service-app-3
+  template:
+    metadata:
+      labels:
+        app: service-app-3
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        name: service-app-3
+        ports:
+        - containerPort: 80

@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-app-1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      namespace: thor-default

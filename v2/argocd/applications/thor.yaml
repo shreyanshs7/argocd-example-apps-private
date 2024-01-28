@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: thor
+  namespace: argocd
+spec:
+  destination:
+    namespace: thor
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: v2/overlays/thor
+    repoURL: "git@github.com:shreyanshs7/argocd-example-apps-private.git"
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

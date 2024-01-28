@@ -4,3 +4,8 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+
+configMapGenerator:
+- name: configmap-1
+  envs:
+  - configmap-1.env

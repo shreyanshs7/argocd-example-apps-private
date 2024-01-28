@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: service-app-3
+  namespace: thor-default
 spec:
   replicas: 3
   template:

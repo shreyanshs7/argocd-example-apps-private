@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hulk
+  namespace: argocd
+spec:
+  destination:
+    namespace: hulk
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: v3/hulk
+    repoURL: "git@github.com:shreyanshs7/argocd-example-apps-private.git"
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

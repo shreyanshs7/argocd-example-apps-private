@@ -15,9 +15,6 @@ spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: app-1
-        envFrom:
-          - configMapRef:
-              name: configmap-1
         ports:
         - containerPort: 80
       imagePullSecrets:

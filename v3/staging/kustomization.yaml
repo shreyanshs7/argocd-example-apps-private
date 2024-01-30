@@ -4,7 +4,7 @@ kind: Kustomization
 namePrefix: staging-
 
 resources:
-- namespaces/hulk-accounts.yaml
-- namespaces/hulk-platform.yaml
+- accounts/namespace.yaml
+- platform/namespace.yaml
 - accounts/
 - platform/

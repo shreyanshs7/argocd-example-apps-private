@@ -15,7 +15,7 @@ spec:
         app: app-2
     spec:
       containers:
-      - image: alpine
+      - image: mongo
         name: app-2
         ports:
         - containerPort: 80

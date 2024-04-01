@@ -15,7 +15,7 @@ spec:
         app: app-2
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+      - image: alpine
         name: app-2
         ports:
         - containerPort: 80

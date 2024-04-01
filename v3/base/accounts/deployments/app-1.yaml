@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-1
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   revisionHistoryLimit: 0
   selector:

@@ -9,6 +9,9 @@ resources:
 
 
 images:
-- name: nginx
+- name: memcached
   newName: memcached
-  newTag: latest
+  newTag: 1.6
+- name: redis
+  newName: redis
+  newTag: 7.2

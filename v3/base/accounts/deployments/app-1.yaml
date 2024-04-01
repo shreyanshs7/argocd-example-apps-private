@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-1
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   revisionHistoryLimit: 0
   selector:

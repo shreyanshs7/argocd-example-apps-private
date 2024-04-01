@@ -6,3 +6,9 @@ resources:
 - platform/namespace.yaml
 - accounts/
 - platform/
+
+
+images:
+- name: nginx
+  newName: memcached
+  newTag: latest

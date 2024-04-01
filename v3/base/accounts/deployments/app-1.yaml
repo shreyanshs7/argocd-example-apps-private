@@ -15,7 +15,7 @@ spec:
         app: app-1
     spec:
       containers:
-      - image: nginx:latest
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: app-1
         ports:
         - containerPort: 80

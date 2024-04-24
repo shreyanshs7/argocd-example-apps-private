@@ -19,5 +19,8 @@ spec:
         name: app-1
         ports:
         - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: url-config
       imagePullSecrets:
         - name: regcred

@@ -10,4 +10,6 @@ resources:
 
 
 patches:
+  - path: patches/configmap/clusters-nameip-config.yaml
+  - path: patches/configmap/url.yaml
   - path: patches/deployments/app-1.yaml

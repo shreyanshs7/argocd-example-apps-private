@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clusters-nameip-config
+data:
+  ENV_CLUSTER_staging: yolo
+  SIGNUP_ALLOWED_ON: staging

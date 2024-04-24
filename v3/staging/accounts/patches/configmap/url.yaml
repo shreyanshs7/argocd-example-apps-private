@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: url-config
+data:
+  ROUTER_URL: router_url
+  DEFAULT_CLUSTER_DOMAIN: default_cluster_domain
+  APP_URL: app_url
+  ROUTER_OLD_URL: router_old_url

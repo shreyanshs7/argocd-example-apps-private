@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - accounts/namespace.yaml
-- platform/namespace.yaml
+# - platform/namespace.yaml
 - accounts/
-- platform/
+# - platform/

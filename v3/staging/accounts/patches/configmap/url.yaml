@@ -5,5 +5,5 @@ metadata:
 data:
   ROUTER_URL: router_url
   DEFAULT_CLUSTER_DOMAIN: default_cluster_domain
-  APP_URL: app_url
+  APP_URL: testing_generator_rollout
   ROUTER_OLD_URL: router_old_url

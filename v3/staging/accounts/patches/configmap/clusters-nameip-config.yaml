@@ -4,4 +4,4 @@ metadata:
   name: clusters-nameip-config
 data:
   ENV_CLUSTER_staging: updated_yolo
-  SIGNUP_ALLOWED_ON: staging
+  SIGNUP_ALLOWED_ON: staging_test_again
